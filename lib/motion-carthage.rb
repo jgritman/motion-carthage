@@ -43,6 +43,7 @@ end
 
 def copy_frameworks(archs)
   ENV["BUILT_PRODUCTS_DIR"] = File.expand_path("build/Carts")
+  ENV["TARGET_BUILD_DIR"] = File.expand_path("build/Carts")
   ENV["FRAMEWORKS_FOLDER_PATH"] = archs
   ENV["VALID_ARCHS"] = archs
   ENV["SCRIPT_INPUT_FILE_COUNT"] = "#{App.config.carts.count}"
